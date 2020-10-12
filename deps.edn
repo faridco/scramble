@@ -1,0 +1,11 @@
+{:paths ["src/clj" "resources" "classes"]
+ :deps {org.clojure/clojure {:mvn/version "1.10.1"}
+        com.cognitect/transit-clj {:mvn/version "1.0.324"}
+        compojure/compojure {:mvn/version "1.6.2"}
+        ring/ring-core {:mvn/version "1.8.2"}
+        ring/ring-jetty-adapter {:mvn/version "1.8.2"}
+        ring-cors/ring-cors {:mvn/version "0.1.13"}}
+ :aliases {:dev {:extra-deps {nrepl/nrepl {:mvn/version "0.8.2"}}}
+           :run {:main-opts ["-m" "app.core"]}
+           :uberjar {:extra-deps {uberdeps/uberdeps {:mvn/version "1.0.2"}}
+                     :main-opts ["-m" "uberdeps.uberjar"]}}}
